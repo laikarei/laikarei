@@ -17,7 +17,10 @@ body {
                  "Helvetica Neue", Arial, sans-serif;
     color: #ffffff;
 
-    background-image: url('../laikarei/assets/Index.png');
+    body {
+    background-image: url('../assets/Index.png');
+}
+
 
     background-size: cover;
     background-position: center center;
