@@ -311,11 +311,10 @@ body.contact-page {
    ============================================================ */
 @media (max-width: 768px) {
 
-    /* Header layout */
     header {
+        padding-top: 60px;
         padding-left: 24px;
         padding-right: 24px;
-        padding-top: 60px;
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
@@ -324,6 +323,10 @@ body.contact-page {
     .logo {
         font-size: 32px;
         line-height: 1.1;
+    }
+
+    .main-nav {
+        gap: 32px;
     }
 
     .main-nav a {
