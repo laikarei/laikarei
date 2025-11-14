@@ -194,23 +194,49 @@ body.contact-page {
     color: #D5D0E0;
 }
 
-/* FUNA – Video -------------------------------------------------- */
 
-/* video */
-.funa-video-wrapper {
-    max-width: 1204px;
-    margin: 40px auto 320px auto;
-    text-align: center;
+
+/* -------------------------------------------------------------
+   FUNA — Minimal Elegant YouTube Player
+------------------------------------------------------------- */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;   /* ancho editorial */
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+
+    /* sombra suave y oscura — muy sutil */
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
-.funa-video-wrapper iframe {
-    width: 100%;
-    height: 680px;
-    border: none;
-    border-radius: 8px;
-    margin-bottom: 80px;  /* o el valor que quieras */
+/* relación de aspecto 16:9 */
+.video-container::before {
+    content: "";
     display: block;
-   
+    padding-top: 56.25%; /* 16:9 */
+}
+
+/* iframe dark + responsivo */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+    border-radius: 8px;
+}
+
+/* espaciado inferior editorial */
+.funa-video-wrapper {
+    max-width: 1204px; 
+    margin: 40px auto 160px auto;
+    text-align: center;
 }
 
 
