@@ -211,10 +211,9 @@ body.contact-page {
 
 /* Adjust for vertical content */
 .video-container::before {
-    content: "";
-    display: block;
-    padding-top: 130%; /* vertical format fix */
+    padding-top: 177%;
 }
+
 
 .video-container iframe {
     position: absolute;
