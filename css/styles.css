@@ -1,0 +1,257 @@
+/* --- Reset mínimo --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* --- Fondo y tipografía (Futura) --- */
+
+body {
+    font-family: "Futura", -apple-system, BlinkMacSystemFont,
+                 "Helvetica Neue", Arial, sans-serif;
+    color: #ffffff;
+
+    background-image: url("../assets/index.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* --- Header flotando sobre la imagen --- */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding-top: 120px;
+    padding-left: 203px;
+    padding-right: 203px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   /* ← CORREGIDO: centra verticalmente */
+    z-index: 10;
+}
+
+
+/* --- Laika Rei --- */
+
+.logo {
+    font-size: 48px;  /* ajusta si quieres más grande/pequeño */
+    line-height: 1.2;
+    color: #D5D0E0;  
+}
+
+.logo a {
+    color: #D5D0E0;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.logo a:hover {
+    opacity: 0.7; /* misma opacidad que el menú */
+}
+
+
+
+/* --- Menú --- */
+
+.main-nav {
+    display: flex;
+    gap: 64px;        /* espacio entre Bio / FUNA / Contact */
+    font-size: 16px;
+    
+}
+
+.main-nav a {
+    color: #D5D0E0;
+    text-decoration: none;
+    font-size: 18px;        /* más pequeño como en tu imagen */
+    font-weight: 400;       /* medium/light, NO bold */
+    letter-spacing: 0.5px;  /* ligera separación como Futura */
+}
+
+.main-nav a.active {
+    opacity: 1;
+    position: relative;
+}
+
+.main-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -12px;   /* ajusta la distancia vertical exacta */
+    width: 100%;
+    height: 1px;
+    background-color: #D5D0E0;
+}
+
+
+.main-nav a:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+/* --- BIO PAGE --- */
+
+
+body.bio-page {
+    background-color: #151517;   /* color exacto */
+    background-image: none;      /* no usar fondo de index */
+}
+
+.bio-wrapper {
+    width: 100%;
+    max-width: 1204px;           /* ancho exacto de la imagen */
+    margin: 0 auto;
+    padding-top: 330px;          /* distancia exacta desde header a imagen */
+    padding-bottom: 160px;       /* espacio inferior */
+}
+
+.bio-image {
+    width: 65%;           /* ancho completo del contenedor */
+    height: auto;          /* altura automática, proporcional */
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto 60px auto;
+}
+
+
+.bio-text {
+    color: #D5D0E0;
+    font-family: "Futura", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    max-width: 760px;
+    margin: 0 auto;              /* centrado exacto */
+}
+
+
+
+
+
+
+/* FUNA WRAPPER — MISMO ESPACIADO QUE BIO */
+
+
+body.funa-page {
+    background-color: #151517;   /* color exacto */
+    background-image: none;      /* no usar fondo de index */
+}
+
+.funa-wrapper {
+    max-width: 1204px;      /* mismo ancho que BIO */
+    margin: 0 auto;
+    padding-top: 500px;     /* mismo padding-top que quieres desde el header */
+    padding-bottom: 60px;  /* mismo aire que en BIO */
+}
+
+
+/* IMÁGENES */
+
+.funa-images {
+    display: flex;
+    justify-content: center;   /* ambos bloques centrados horizontalmente */
+    align-items: center;        /* 🔥 centra la imagen izquierda verticalmente respecto a la derecha */
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+
+/* Imagen izquierda (768x1319) */
+.funa-left {
+    width: 600px;              /* escala proporcional dentro del layout */
+    height: auto;
+    border-radius: 6px;
+
+    margin-top: -148px;         /* centra verticalmente con respecto a la derecha */
+}
+
+/* Imagen derecha (768x1024) */
+.funa-right {
+    width: 600px;              /* mismo ancho visual para equilibrio de diseño */
+    height: auto;
+    border-radius: 6px;
+    transform: translateY(-70px);   /* súbela 70px — puedes ajustar el número */
+}
+
+/* TEXTO (MISMO ESTILO QUE BIO) */
+.funa-text {
+    width: 760px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #D5D0E0;
+}
+
+
+
+/* CONTACT -------------------------------------------------- */
+
+
+body.contact-page {
+    background-color: #151517;   /* color exacto */
+    background-image: none;      /* no usar fondo de index */
+}
+
+.contact-wrapper {
+    max-width: 1204px;         /* mismo ancho editorial que bio y FUNA */
+    margin: 0 auto;
+    padding-top: 330px;        /* mismo padding que bio image */
+    padding-bottom: 160px;     /* mismo space below */
+    text-align: center;
+}
+
+.contact-image {
+    width: 65%;             /* mismo ancho exacto de la imagen de bio */
+    border-radius: 8px;
+    margin: 0 auto 60px auto;  /* misma distancia imagen → texto */
+    display: block;
+}
+
+.contact-links a {
+    display: block;
+    color: #D5D0E0;
+    font-size: 14px;
+    margin: 12px 0;
+    opacity: 0.8;
+}
+
+.contact-links a:hover {
+    opacity: 1;
+}
+
+
+
+
+
+/* FUNA – Video -------------------------------------------------- */
+
+.funa-video-wrapper {
+    max-width: 1204px;          /* mismo ancho editorial que las imágenes */
+    margin:40px auto 160px auto; /* 40px = espacio desde el texto */
+    text-align: center;
+}
+
+.funa-video-wrapper iframe {
+    width: 100%;
+    height: 680px;              /* proporción perfecta para 1204px */
+    border: none;
+    border-radius: 8px;
+    display: block;
+}
+
