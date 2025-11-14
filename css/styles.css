@@ -398,10 +398,13 @@ body.contact-page {
         padding-top: 180px;
     }
 
-    .bio-text,
+    .  .bio-text,
     .funa-text {
-        font-size: 13px;
         width: 90%;
+        max-width: 90%;
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0 auto;
     }
 }
 
