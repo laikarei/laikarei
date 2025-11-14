@@ -15,6 +15,8 @@ html, body {
 body {
     font-family: "Futura", -apple-system, BlinkMacSystemFont,
                  "Helvetica Neue", Arial, sans-serif;
+
+     color: #ffffff;
    
 
    
@@ -258,4 +260,12 @@ body.contact-page {
     border-radius: 8px;
     display: block;
 }
+
+
+
+
+html body {
+    background-image: url('../assets/Index.png') !important;
+}
+
 
