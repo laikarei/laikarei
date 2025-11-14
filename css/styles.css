@@ -1,4 +1,6 @@
-/* --- Reset mínimo --- */
+/* ---------------------------------------------------------
+   RESET
+--------------------------------------------------------- */
 
 * {
     margin: 0;
@@ -10,26 +12,32 @@ html, body {
     height: 100%;
 }
 
-/* --- Fondo y tipografía (Futura) --- */
+
+/* ---------------------------------------------------------
+   BASE TYPOGRAPHY & DEFAULT COLORS
+--------------------------------------------------------- */
 
 body {
-    font-family: "Futura", -apple-system, BlinkMacSystemFont,
-                 "Helvetica Neue", Arial, sans-serif;
+    font-family: "Futura", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    color: #ffffff; 
+}
 
-     color: #ffffff;
-   
 
-   
+/* ---------------------------------------------------------
+   INDEX PAGE (background only)
+--------------------------------------------------------- */
+
+body.index-page {
     background-image: url('../assets/Index.png');
-
-
-
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
-/* --- Header flotando sobre la imagen --- */
+
+/* ---------------------------------------------------------
+   SHARED HEADER
+--------------------------------------------------------- */
 
 header {
     position: absolute;
@@ -43,17 +51,17 @@ header {
 
     display: flex;
     justify-content: space-between;
-    align-items: center;   /* ← CORREGIDO: centra verticalmente */
+    align-items: center;
     z-index: 10;
 }
 
 
-/* --- Laika Rei --- */
+/* LOGO --------------------------------------------------- */
 
 .logo {
-    font-size: 48px;  /* ajusta si quieres más grande/pequeño */
+    font-size: 48px;
     line-height: 1.2;
-    color: #D5D0E0;  
+    color: #D5D0E0;
 }
 
 .logo a {
@@ -63,26 +71,28 @@ header {
 }
 
 .logo a:hover {
-    opacity: 0.7; /* misma opacidad que el menú */
+    opacity: 0.7;
 }
 
 
-
-/* --- Menú --- */
+/* NAVIGATION -------------------------------------------- */
 
 .main-nav {
     display: flex;
-    gap: 64px;        /* espacio entre Bio / FUNA / Contact */
-    font-size: 16px;
-    
+    gap: 64px;
 }
 
 .main-nav a {
     color: #D5D0E0;
     text-decoration: none;
-    font-size: 18px;        /* más pequeño como en tu imagen */
-    font-weight: 400;       /* medium/light, NO bold */
-    letter-spacing: 0.5px;  /* ligera separación como Futura */
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover {
+    opacity: 0.8;
 }
 
 .main-nav a.active {
@@ -94,108 +104,88 @@ header {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -12px;   /* ajusta la distancia vertical exacta */
+    bottom: -12px;
     width: 100%;
     height: 1px;
     background-color: #D5D0E0;
 }
 
 
-.main-nav a:hover {
-    opacity: 0.8;
+/* ---------------------------------------------------------
+   PAGE BACKGROUNDS (BIO / FUNA / CONTACT)
+--------------------------------------------------------- */
+
+body.bio-page,
+body.funa-page,
+body.contact-page {
+    background-color: #151517;
+    background-image: none;
 }
 
 
-
-
-
-
-
-
-/* --- BIO PAGE --- */
-
-
-body.bio-page {
-    background-color: #151517;   /* color exacto */
-    background-image: none;      /* no usar fondo de index */
-}
+/* ---------------------------------------------------------
+   BIO PAGE
+--------------------------------------------------------- */
 
 .bio-wrapper {
-    width: 100%;
-    max-width: 1204px;           /* ancho exacto de la imagen */
+    max-width: 1204px;
     margin: 0 auto;
-    padding-top: 330px;          /* distancia exacta desde header a imagen */
-    padding-bottom: 160px;       /* espacio inferior */
+    padding-top: 330px;
+    padding-bottom: 160px;
 }
 
 .bio-image {
-    width: 65%;           /* ancho completo del contenedor */
-    height: auto;          /* altura automática, proporcional */
+    width: 65%;
+    height: auto;
     border-radius: 6px;
     display: block;
     margin: 0 auto 60px auto;
 }
 
-
 .bio-text {
+    max-width: 760px;
+    margin: 0 auto;
     color: #D5D0E0;
-    font-family: "Futura", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     font-size: 14px;
     line-height: 1.55;
-    max-width: 760px;
-    margin: 0 auto;              /* centrado exacto */
 }
 
 
-
-
-
-
-/* FUNA WRAPPER — MISMO ESPACIADO QUE BIO */
-
-
-body.funa-page {
-    background-color: #151517;   /* color exacto */
-    background-image: none;      /* no usar fondo de index */
-}
+/* ---------------------------------------------------------
+   FUNA PAGE
+--------------------------------------------------------- */
 
 .funa-wrapper {
-    max-width: 1204px;      /* mismo ancho que BIO */
+    max-width: 1204px;
     margin: 0 auto;
-    padding-top: 500px;     /* mismo padding-top que quieres desde el header */
-    padding-bottom: 60px;  /* mismo aire que en BIO */
+    padding-top: 500px;
+    padding-bottom: 60px;
 }
 
-
-/* IMÁGENES */
-
+/* image layout */
 .funa-images {
     display: flex;
-    justify-content: center;   /* ambos bloques centrados horizontalmente */
-    align-items: center;        /* 🔥 centra la imagen izquierda verticalmente respecto a la derecha */
+    justify-content: center;
+    align-items: center;
     gap: 30px;
     margin-bottom: 60px;
 }
 
-
-/* Imagen izquierda (768x1319) */
+/* left image */
 .funa-left {
-    width: 600px;              /* escala proporcional dentro del layout */
-    height: auto;
+    width: 600px;
     border-radius: 6px;
-
-    margin-top: -148px;         /* centra verticalmente con respecto a la derecha */
+    margin-top: -148px;
 }
 
-/* Imagen derecha (768x1024) */
+/* right image */
 .funa-right {
-    width: 600px;              /* mismo ancho visual para equilibrio de diseño */
-    height: auto;
+    width: 600px;
     border-radius: 6px;
-    transform: translateY(-70px);   /* súbela 70px — puedes ajustar el número */
+    transform: translateY(-70px);
 }
 
-/* TEXTO (MISMO ESTILO QUE BIO) */
+/* funa text */
 .funa-text {
     width: 760px;
     margin: 0 auto;
@@ -204,28 +194,38 @@ body.funa-page {
     color: #D5D0E0;
 }
 
-
-
-/* CONTACT -------------------------------------------------- */
-
-
-body.contact-page {
-    background-color: #151517;   /* color exacto */
-    background-image: none;      /* no usar fondo de index */
+/* video */
+.funa-video-wrapper {
+    max-width: 1204px;
+    margin: 40px auto 160px auto;
+    text-align: center;
 }
 
+.funa-video-wrapper iframe {
+    width: 100%;
+    height: 680px;
+    border: none;
+    border-radius: 8px;
+    display: block;
+}
+
+
+/* ---------------------------------------------------------
+   CONTACT PAGE
+--------------------------------------------------------- */
+
 .contact-wrapper {
-    max-width: 1204px;         /* mismo ancho editorial que bio y FUNA */
+    max-width: 1204px;
     margin: 0 auto;
-    padding-top: 330px;        /* mismo padding que bio image */
-    padding-bottom: 160px;     /* mismo space below */
+    padding-top: 330px;
+    padding-bottom: 160px;
     text-align: center;
 }
 
 .contact-image {
-    width: 65%;             /* mismo ancho exacto de la imagen de bio */
+    width: 65%;
     border-radius: 8px;
-    margin: 0 auto 60px auto;  /* misma distancia imagen → texto */
+    margin: 0 auto 60px auto;
     display: block;
 }
 
@@ -235,40 +235,9 @@ body.contact-page {
     font-size: 14px;
     margin: 12px 0;
     opacity: 0.8;
+    transition: opacity 0.2s ease;
 }
 
 .contact-links a:hover {
     opacity: 1;
 }
-
-
-
-
-
-/* FUNA – Video -------------------------------------------------- */
-
-.funa-video-wrapper {
-    max-width: 1204px;          /* mismo ancho editorial que las imágenes */
-    margin:40px auto 160px auto; /* 40px = espacio desde el texto */
-    text-align: center;
-}
-
-.funa-video-wrapper iframe {
-    width: 100%;
-    height: 680px;              /* proporción perfecta para 1204px */
-    border: none;
-    border-radius: 8px;
-    display: block;
-}
-
-
-body.index-page {
-    background-image: url('../assets/Index.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-
-
