@@ -196,18 +196,19 @@ body.contact-page {
 
 /* FUNA – Video -------------------------------------------------- */
 
+/* video */
 .funa-video-wrapper {
-    max-width: 900px;          /* ancho del video */
-    margin: 40px auto 200px auto;  /* centrado horizontal (auto) y padding bottom */
-    text-align: center;        /* por si acaso */
+    max-width: 1204px;
+    margin: 40px auto 160px auto;
+    text-align: center;
 }
 
 .funa-video-wrapper iframe {
-    display: block;            /* hace que respete margin auto */
-    width: 100%;               /* ocupa todo el wrapper */
-    height: 510px;             /* o el alto que quieras */
+    width: 100%;
+    height: 680px;
     border: none;
     border-radius: 8px;
+    display: block;
 }
 
 
