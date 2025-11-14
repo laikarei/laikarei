@@ -28,10 +28,16 @@ body {
 --------------------------------------------------------- */
 
 body.index-page {
-    background-image: url('../assets/Index.png');
+    background-image: url('../assets/Index.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+@supports (background-image: url("../assets/Index.jpg")) {
+    body.index-page {
+        background-image: url('../assets/Index.jpg');
+    }
 }
 
 
