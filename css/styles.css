@@ -198,9 +198,12 @@ body.contact-page {
 .funa-video-wrapper {
     max-width: 1204px;
     margin: 40px auto 160px auto;
-    padding-bottom: 160px;
     text-align: center;
+
+    display: flex;           /* 💡 esto centra el iframe */
+    justify-content: center; /* horizontal */
 }
+
 
 .funa-video-wrapper iframe {
     width: 800px;
