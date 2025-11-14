@@ -250,6 +250,164 @@ body.contact-page {
 
 
 
+/* ============================================================
+   RESPONSIVE LAYOUT
+   ============================================================ */
+
+
+/* ============================================================
+   📱 TABLET — max-width: 1024px
+   ============================================================ */
+@media (max-width: 1024px) {
+
+    /* Header */
+    header {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 80px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .main-nav {
+        gap: 40px;
+    }
+
+    /* BIO & CONTACT */
+    .bio-wrapper,
+    .contact-wrapper {
+        padding-top: 260px;
+    }
+
+    .bio-image,
+    .contact-image {
+        width: 80%;
+    }
+
+    /* FUNA Images */
+    .funa-left,
+    .funa-right {
+        width: 48%;
+        transform: none;
+        margin-top: 0;
+    }
+
+    .funa-wrapper {
+        padding-top: 380px;
+    }
+}
+
+
+/* ============================================================
+   📱 MOBILE — max-width: 768px
+   ============================================================ */
+@media (max-width: 768px) {
+
+    /* Header layout */
+    header {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 32px;
+        line-height: 1.1;
+    }
+
+    .main-nav a {
+        font-size: 15px;
+    }
+
+    /* BIO & CONTACT */
+    .bio-wrapper,
+    .contact-wrapper {
+        padding-top: 220px;
+        padding-bottom: 120px;
+    }
+
+    .bio-image,
+    .contact-image {
+        width: 100%;
+    }
+
+    .bio-text,
+    .contact-links {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* FUNA images stack */
+    .funa-images {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .funa-left,
+    .funa-right {
+        width: 100%;
+        margin: 0;
+    }
+
+    .funa-wrapper {
+        padding-top: 260px;
+    }
+
+    .funa-text {
+        width: 90%;
+    }
+
+    /* FUNA video responsive */
+    .funa-video-wrapper iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+
+/* ============================================================
+   📱 MOBILE SMALL — max-width: 480px
+   ============================================================ */
+@media (max-width: 480px) {
+
+    header {
+        padding-top: 40px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .main-nav {
+        gap: 20px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .bio-wrapper,
+    .contact-wrapper,
+    .funa-wrapper {
+        padding-top: 180px;
+    }
+
+    .bio-text,
+    .funa-text {
+        font-size: 13px;
+        width: 90%;
+    }
+}
+
+
+
+
 
 
 
