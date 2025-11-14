@@ -199,7 +199,7 @@ body.contact-page {
 /* video */
 .funa-video-wrapper {
     max-width: 1204px;
-    margin: 40px auto 240px auto;
+    margin: 40px auto 320px auto;
     text-align: center;
 }
 
@@ -209,6 +209,7 @@ body.contact-page {
     border: none;
     border-radius: 8px;
     margin-bottom: 80px;  /* o el valor que quieras */
+    display: block;
    
 }
 
