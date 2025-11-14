@@ -208,6 +208,9 @@ body.contact-page {
     height: 680px;
     border: none;
     border-radius: 8px;
+    margin-bottom: 80px;  /* o el valor que quieras */
+}
+
     display: block;
 }
 
