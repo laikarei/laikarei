@@ -15,11 +15,11 @@ html, body {
 body {
     font-family: "Futura", -apple-system, BlinkMacSystemFont,
                  "Helvetica Neue", Arial, sans-serif;
-    color: #ffffff;
+   
 
-    body {
+   
     background-image: url('../assets/Index.png');
-}
+
 
 
     background-size: cover;
