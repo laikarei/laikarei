@@ -194,24 +194,22 @@ body.contact-page {
     color: #D5D0E0;
 }
 
-/* video */
+/* FUNA – Video -------------------------------------------------- */
+
 .funa-video-wrapper {
-    max-width: 1204px;
-    margin: 40px auto 160px auto;
-    text-align: center;
-
-    display: flex;           /* 💡 esto centra el iframe */
-    justify-content: center; /* horizontal */
+    max-width: 900px;          /* ancho del video */
+    margin: 40px auto 200px auto;  /* centrado horizontal (auto) y padding bottom */
+    text-align: center;        /* por si acaso */
 }
-
 
 .funa-video-wrapper iframe {
-    width: 800px;
-    height: 450px;
+    display: block;            /* hace que respete margin auto */
+    width: 100%;               /* ocupa todo el wrapper */
+    height: 510px;             /* o el alto que quieras */
     border: none;
     border-radius: 8px;
-    display: block;
 }
+
 
 
 
