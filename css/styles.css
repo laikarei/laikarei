@@ -227,7 +227,7 @@ body.contact-page {
 
 .funa-video-wrapper {
     max-width: 1204px;
-    margin: 40px auto;
+    margin: 40px auto 320px auto; /* now visible */
     padding-bottom: 200px; /* ← adjustable */
     text-align: center;
 }
