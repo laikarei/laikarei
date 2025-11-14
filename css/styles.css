@@ -262,10 +262,13 @@ body.contact-page {
 }
 
 
-
-
-html body {
-    background-image: url('../assets/Index.png') !important;
+body.index-page {
+    background-image: url('../assets/Index.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+
 
 
