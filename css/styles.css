@@ -17,7 +17,7 @@ body {
                  "Helvetica Neue", Arial, sans-serif;
     color: #ffffff;
 
-    background-image: url('.assets/Index.png');
+    background-image: url('..assets/Index.png');
 
     background-size: cover;
     background-position: center center;
