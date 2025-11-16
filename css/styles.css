@@ -207,6 +207,8 @@ body.contact-page {
 .funa-audio-wrapper {
     max-width: 900px;
     margin: 20px auto 60px auto;
+   text-align: center;
+   
 }
 
 .bandcamp-player {
